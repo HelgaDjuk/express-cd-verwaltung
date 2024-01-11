@@ -1,0 +1,27 @@
+<%- include("kopf") %>
+<div class="wrapper">
+<h1>CDs</h1>
+<h2>Einträge: <%= daten.length %></h2>
+<div>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Interpret</th>
+<th>Titel</th>
+<th><a href="/neu">Neu</a></th>
+</tr>
+</thead>
+<tbody>
+<% for (let cd of daten) { %>
+<tr>
+<td><%= cd.id %></td>
+<td><%= cd.interpret %></td><td><%= cd.titel %></td>
+<td><a href="/bearbeiten/<%= cd.id %>">Bearbeiten</a> 
+<a href="/loeschen/<%= cd.id %>">Löschen</a></td>
+</tr>
+<% } %>
+</tbody>
+</table>
+</div>
+<%- include("fuss") %>

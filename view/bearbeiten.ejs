@@ -1,0 +1,16 @@
+<%- include("kopf") %>
+<h1 eintrag-titel>Eintrag bearbeiten</h1>
+<form action="/bearbeiten/<%= daten.id %>" method="post">
+<label>
+Interpret
+<input type="text" name="interpret" value="<%= 
+daten.interpret %>">
+</label>
+<label>
+Titel
+<input type="text" name="titel" value="<%= daten.titel 
+%>">
+</label>
+<input type="submit" value="Ändern">
+</form>
+<%- include("fuss") %>

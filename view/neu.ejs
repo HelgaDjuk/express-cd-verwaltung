@@ -1,0 +1,14 @@
+<%- include("kopf") %>
+<h1 class="eintrag-titel">Neuer Eintrag</h1>
+<form action="/neu" method="post">
+<label>
+Interpret
+<input type="text" name="interpret">
+</label>
+<label>
+Titel
+<input type="text" name="titel">
+</label>
+<input type="submit" value="Anlegen">
+</form>
+<%- include("fuss") %>
